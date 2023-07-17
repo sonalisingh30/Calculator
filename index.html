@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    #mainbody {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+        align-items: center;
+        justify-items: center;
+        background-image: url('bg_web.png');
+    }
+
+    #mainContainer {
+
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-self: center;
+    }
+
+    #topContainer {
+        
+        height: 100px;
+        background-color: #637DDD;
+        border-radius: 3vw;
+    }
+
+    #top_layer {
+        flex: 1;
+        height: 100PX;
+        display: flex;
+        flex-direction: row;
+        margin: 0.2vw;
+    }
+
+    .top_box {
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        flex: 1;
+        background-color: #879DEF;
+        margin: 0.2vw;
+        font-size: 32px;
+        color: white;
+
+    }
+
+    #division {
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        flex: 1;
+        color: white;
+        background-color: #233689;
+        margin: 0.2vw;
+        font-size: 32px;
+    }
+
+    #multiply {
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        flex: 1;
+        color: white;
+        background-color: #233689;
+        margin: 0.2vw;
+        font-size: 32px;
+    }
+
+    #add {
+        flex: 1;
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        background-color: #233689;
+        margin: 0.2vw;
+        font-size: 32px;
+    }
+
+    #subtract {
+        flex: 1;
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        background-color: #233689;
+        margin: 0.2vw;
+        font-size: 32px;
+    }
+
+    #clear {
+        flex: 1;
+        color: white;
+        background-color: #233689;
+        margin: 0.2vw;
+        font-size: 32px;
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+    }
+
+    #delete {
+        flex: 1;
+        color: white;
+        background-color: #233689;
+        margin: 0.2vw;
+        font-size: 32px;
+        padding: 3%;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+
+    }
+
+    @media screen and (max-width:800px) {
+        #mainbody {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+            background-image: url('bg_phone.png');
+        }
+
+    }
+</style>
+
+<body id="mainbody">
+    <div style="display: flex;height:100%;">
+        <div id="mainContainer">
+            <div id="topContainer"> </div>
+            <div id="top_layer">
+                <div class="top_box"> 1 </div>
+                <div class="top_box"> 2 </div>
+                <div class="top_box"> 3 </div>
+                <div id="division" onclick="division()"> / </div>
+            </div>
+            <div id="top_layer">
+                <div class="top_box"> 4 </div>
+                <div class="top_box"> 5 </div>
+                <div class="top_box"> 6 </div>
+                <div id="multiply" onclick="multiply()"> * </div>
+            </div>
+            <div id="top_layer">
+                <div class="top_box"> 7 </div>
+                <div class="top_box"> 8 </div>
+                <div class="top_box"> 9 </div>
+                <div id="add" onclick="add()"> + </div>
+            </div>
+            <div id="top_layer">
+                <div class="top_box"> 0 </div>
+                <div class="top_box"> . </div>
+                <div class="top_box"> = </div>
+                <div id="subtract" onclick="subtract()"> - </div>
+            </div>
+            <div id="top_layer">
+                <div id="clear"> Clear </div>
+                <div id="delete"> Del </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var division = document.getElementById('division');
+    var multiply = document.getElementById('multiply');
+    var subtract = document.getElementById('subtract');
+    var add = document.getElementById('subtract');
+    function division() {
+
+    }
+    function multiply() {
+
+    }
+    function add() {
+
+    }
+    function subtract() {
+
+    }
+</script>
+
+</html>
