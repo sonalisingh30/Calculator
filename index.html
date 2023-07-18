@@ -30,6 +30,15 @@
         height: 100px;
         background-color: #637DDD;
         border-radius: 3vw;
+        text-align:end;
+        font-size: 32px;
+        color: white;  
+    }
+    #innerContainer{
+
+        
+        padding: 2vw;
+        
     }
 
     #top_layer {
@@ -141,34 +150,37 @@
 <body id="mainbody">
     <div style="display: flex;height:100%;">
         <div id="mainContainer">
-            <div id="topContainer"> </div>
+            
+            <div id="topContainer" > 
+            <div id="innerContainer"> </div>
+            </div>
             <div id="top_layer">
-                <div class="top_box"> 1 </div>
-                <div class="top_box"> 2 </div>
-                <div class="top_box"> 3 </div>
+                <div class="top_box" onclick="one()"> 1 </div>
+                <div class="top_box" onclick="two()"> 2 </div>
+                <div class="top_box" onclick="three()"> 3 </div>
                 <div id="division" onclick="division()"> / </div>
             </div>
             <div id="top_layer">
-                <div class="top_box"> 4 </div>
-                <div class="top_box"> 5 </div>
-                <div class="top_box"> 6 </div>
+                <div class="top_box" onclick="four()"> 4 </div>
+                <div class="top_box" onclick="five()"> 5 </div>
+                <div class="top_box" onclick="six()"> 6 </div>
                 <div id="multiply" onclick="multiply()"> * </div>
             </div>
             <div id="top_layer">
-                <div class="top_box"> 7 </div>
-                <div class="top_box"> 8 </div>
-                <div class="top_box"> 9 </div>
+                <div class="top_box" onclick="seven()"> 7 </div>
+                <div class="top_box" onclick="eight()"> 8 </div>
+                <div class="top_box" onclick="nine()"> 9 </div>
                 <div id="add" onclick="add()"> + </div>
             </div>
             <div id="top_layer">
-                <div class="top_box"> 0 </div>
-                <div class="top_box"> . </div>
-                <div class="top_box"> = </div>
+                <div class="top_box" onclick="zero()"> 0 </div>
+                <div class="top_box" onclick="point()"> . </div>
+                <div class="top_box" onclick="point()"> = </div>
                 <div id="subtract" onclick="subtract()"> - </div>
             </div>
             <div id="top_layer">
-                <div id="clear"> Clear </div>
-                <div id="delete"> Del </div>
+                <div id="clear" onclick="clear()"> Clear </div>
+                <div id="delete" onclick="del()"> Del </div>
             </div>
 
 
@@ -177,21 +189,89 @@
 
 </body>
 <script>
-    var division = document.getElementById('division');
-    var multiply = document.getElementById('multiply');
-    var subtract = document.getElementById('subtract');
-    var add = document.getElementById('subtract');
-    function division() {
+    var num1 =0;
+    var num2=0;
+    var op='x';
+    var topContainer = document.getElementById('topContainer');
+    var innerContainer = document.getElementById('innerContainer');
+    function one(){
+        
+    var currentNumber=innerContainer.innerHTML;
+    currentNumber+="1";
+    innerContainer.innerHTML=currentNumber;
 
+    }
+    function two(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=2;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function three(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=3;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function four(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=4;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function five(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=5;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function six(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=6;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function seven(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=7;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function eight(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=8;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function nine(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=9;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function zero(){
+        var currentNumber=innerContainer.innerHTML;
+        currentNumber+=0;
+        innerContainer.innerHTML=currentNumber;
+    }
+    function point(){
+       var currentNumber=innerContainer.innerHTML;
+        currentNumber+=".";
+        innerContainer.innerHTML=currentNumber;
     }
     function multiply() {
-
+        
+        num1=innerContainer.innerHTML;
+        innerContainer.innerHTML="*";
+        op="*";
+    }
+    function division() {
+        num1=innerContainer.innerHTML;
+        innerContainer.innerHTML="/";
+        op="/";
     }
     function add() {
+        num1=innerContainer.innerHTML;
+        innerContainer.innerHTML="+";
+        op="+";
 
     }
     function subtract() {
-
+        num1=innerContainer.innerHTML;
+        innerContainer.innerHTML="-";
+        op="-";
     }
 </script>
 
